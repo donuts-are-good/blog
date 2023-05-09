@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>blog: @donuts-are-good</title>
+  <!-- <link rel="icon" type="image/x-icon" href="https://user-images.githubusercontent.com/96031819/218300046-eb4cd215-b8ef-44bb-992b-3ce640be7623.png">-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .banner {
+      padding-top: 2em;
+      padding-bottom: 1.2em;
+      font-size: 4em;
+      font-weight: 600;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    } 
+    .info {
+      font-family: monospace;
+      font-size: 1.2em;
+    }
+     a {
+      color:deepskyblue;
+      text-decoration: underline;
+      text-decoration-style: solid;
+      text-decoration-thickness: 4px ;
+      text-decoration-color: #ffeeee;
+      text-decoration-skip-ink: none;
+    }
+    .footer {
+      padding-top: 8em;
+      font-family: monospace; 
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="banner">
+          <center>
+            🍩
+          </center>
+          <center>
+          	<strong>@donuts-are-good</strong>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col info">
+          <p>👋 welcome to my blog :)
+            <br><br>
+
+            <!-- 
+              
+              it'd be great to have something smarter or cooler to say here that more accurately conveyed how i feel about programming without sounding cheesy. what was originally intended to be here, but was too long to fit was that ... i really just like making things. i dont often make something because other solutions weren't as good, i just think 'it would be cool to have an x that did y'. i don't think i've 'bested' or 'one upped' literally any project out there with something i've built, and i'm okay with that, but the things i make satisfy a joy in me, even if it is less than what exists already, it is the joy of the experience, the kata, the eustress, the endless judo with the machine. i live for this. hope that's not too cheesy.
+
+              also, good on you for reaching this point :) keep in touch
+              
+              =bDMhyTqfSzqiOFMl9JotfzocWUMtjlomkJLt0PVg92LhHzockzMz9JrfkJLyWUDh92plITp
+            
+            -->
+
+            I do little code sprints and personal challenges for the joy of the making things <span style="color:deeppink;">&hearts;</span>
+            <br><br>
+            <b>2023 Goal:</b> one open source project completed per week
+            <br><br>
+            <a href="https://github/donuts-are-good/" target="_blank">github</a><br><br>
+            <small>I made this blog with a cool static site generator called <a href="https://github.com/donuts-are-good/bearclaw">bearclaw</a>, try it out! 
+          </p>
+        </small>
+        <br><b>links</b>
+        <br><small><a href="./index.html">🏠 home</a></small>
+        <br><small><a href="./about.html">🙋 about</a></small>
+        <br><small><a href="./feed.xml">📡 rss</a></small>
+
+      </div>
+      <div class="col">
+<h1>a mixed bag of goodies</h1>
+
+<p>this year i challenged myself to code and release one open source project per week. let&rsquo;s go through the year&rsquo;s weekly projects so far and do a brief description of each one. these are in no particular order. some are better than others, and not all are mentioned, but these are some of the fun weekly projects worth mentioning.</p>
+
+<h2>let&rsquo;s start with some recent ones</h2>
+
+<h2><a href="https://github.com/donuts-are-good/linker">linker</a></h2>
+
+<p>cli tool for auditing active network connections. this is a program i wrote because i was always flipping back and forth between lsof and ps to tie network connections and the programs that created them. it was pretty straightforward to get the output i wanted, but most of the time was spent getting the columns to line up with the headers, and i still didn&rsquo;t even get it right. it&rsquo;s called linker because originally i wrote a program to list all of my symlinks on a specific drive, and when i pulled up my editor to write the network version of what became linker, i just erased the old project as I didn&rsquo;t need it anymore and was too lazy to change the name.</p>
+
+<p>example output:</p>
+
+<pre><code>Proto          Local IP         Local Port   Remote IP          Remote Port   Binary Name
+-----------------------------------------------------------------------------
+chrome         192.168.1.100    50840        203.0.113.1       443           chrome
+firefox        192.168.1.100    50852        198.51.100.5      443           firefox
+safari         192.168.1.100    50978        203.0.113.1       443           safari
+game_launcher  127.0.0.1        51275        127.0.0.1         3273          game_launcher
+game_launcher  192.168.1.100    51298        172.217.23.14     443           game_launcher
+game_launcher  192.168.1.100    51743        104.18.36.10      443           game_launcher
+file_manager   192.168.1.100    51305        185.199.108.153   443           file_manager
+file_manager   127.0.0.1        51308        127.0.0.1         51396         file_manager
+file_manager   127.0.0.1        51396        127.0.0.1         51308         file_manager
+file_manager   192.168.1.100    51329        104.237.62.211    443           file_manager
+111
+</code></pre>
+
+<h2><a href="https://github.com/donuts-are-good/boombap">boombap</a></h2>
+
+<p><img src="https://user-images.githubusercontent.com/96031819/236961682-5101d49b-ca44-4c9a-83ad-4d7f78e6a639.png" alt="boombap" /></p>
+
+<p>i listen to soma.fm sometimes when im working just to have something in the background. if you haven&rsquo;t seen soma.fm, i highly recommend you check them out. this app originally played a playlist of my preferred channels from soma, but now i&rsquo;ve added all channels so others might enjoy their favorites too. it&rsquo;s made with fyne (sup andy!) which is a cool gui framework for go projects. it has a play, pause, forward and back button, then my personal list of channels below. a cool detail about this project is that i misunderstood how fyne positions things and when you click a channel to run it the progress bar fills the whole channel list container. it looked cool i reverted the fix and left it like that, so that&rsquo;s why it looks that way when you play something.</p>
+
+<h2><a href="https://github.com/donuts-are-good/albino">albino</a></h2>
+
+<p><img src="https://user-images.githubusercontent.com/96031819/233870018-1f9a4f85-cde8-4fc3-9b21-733b986610ff.png" alt="albino" /></p>
+
+<p>this one&rsquo;s hard to explain. there used to be a program called &lsquo;brainwave generator&rsquo; that would make these tones that were supposed to make your brain reverberate or something and make you feel fun effects (allegedly). they had some weird form of drm and you&rsquo;d buy these single-play programs off this little store and after it played it would no longer play that track again. of course that stuff probably isn&rsquo;t real, but i just had to know, and try it out. i don&rsquo;t know if it works or not, but it didn&rsquo;t stop me from having fun with it. it&rsquo;s named &lsquo;albino&rsquo; because it is a binaural beats generator, -bino, -binaural, get it? i had a lot of fun with the ui. it&rsquo;s shaped like an old cassette to reflect the age of the old bwgen.exe program, which was from the 98se era iirc. clutch your bonzibuddy and hit play, what&rsquo;s the worst that could happen? (allegedly). the gui is fyne and photoshop.</p>
+
+<h2><a href="https://github.com/donuts-are-good/8menu">8menu</a></h2>
+
+<p><img src="https://user-images.githubusercontent.com/96031819/233736410-bae5e590-b91e-422c-9aa9-6d5b428013d8.gif" alt="8menu" /></p>
+
+<p>you&rsquo;ve probably never heard of 9menu, but it was a cool program that i wanted to run on the system i was using, and unfortunately there were no build instructions for it yet, or a build working on this system, so i gave it a shot on my own. it got the name <code>8menu</code> because it is less-than <code>9menu</code>. the way it works is you use name:action pairs of things you want a gui shortcut button bar for. i had a thing i needed this for at work, so it made sense for my purposes. i had a lot of fun making this one and the graphic on the github made me chuckle.</p>
+
+<h2><a href="https://github.com/donuts-are-good/consolequest">consolequest</a></h2>
+
+<p><img src="https://user-images.githubusercontent.com/96031819/232260365-a87e5bc0-c9ff-4d2e-b0d6-9ba9fd0f60d2.png" alt="consolequest" /></p>
+
+<p>look at these graphics. look at them. they&rsquo;re amazing. i bet you want to play it right? well switcheroo, it&rsquo;s a console app, and is all text. the graphics are a lie, but i had the time of my life working on them using stable diffusion and photoshop. surely know you the best selling blockbuster classi game <code>Progress Quest</code>, so i won&rsquo;t go too much into that, but suffice to say it falls into a category called &lsquo;idle games&rsquo;. i always enjoyed progress quest, and came up with the idea for consolequest during a dnd session with my friends. it&rsquo;s a game that is mostly idle, but unlike progress quest it can run in a terminal and periodically requires your input for non trivial things like visiting the medic or merchant. from the start i found it oddly addicting. my current record is day 729.  there are little quests and monsters and a monster tiering system. not to toot my own horn but if you&rsquo;re into this type of thing it was a fun game from development to playing.</p>
+
+<h2><a href="https://github.com/donuts-are-good/shhhbb">shhhbb</a></h2>
+
+<p><img src="https://user-images.githubusercontent.com/96031819/228712817-54829adf-1dd3-48b4-ba14-16fc53d0e7fd.png" alt="shhhbb" /></p>
+
+<p>this is a bbs where anybody with an ssh key can dial in, no signup required. there&rsquo;s a janky little chat that doesn&rsquo;t respect your line buffer as you&rsquo;re typing a message and someone sends a message. your message comes through just fine, but it looks weird because it scrolls your input upward. as you&rsquo;re typing and throws a lot of people off. there&rsquo;s it got a lot of users, i think up to 100+ when it was originally posted to HN. now it gets a few messages a day. initially i wanted to add more features, and when i restarted the service about 10% of people rejoined.
+if you want to try it out, <code>ssh -p 2223 shhhbb.com</code> any ssh key will work. type <code>/help</code> when you get there for a list of commands.</p>
+
+<h2><a href="https://github.com/donuts-are-good/colors">colors</a></h2>
+
+<p><img src="https://user-images.githubusercontent.com/96031819/232985479-1699bf81-7198-4172-b2a0-ecaba9cf0e64.png" alt="colors" /></p>
+
+<p>i like simple things. i can understand simple things. im a simple person. sometimes i need to reinvent the world to understand why the things that aren&rsquo;t simple things are the way they are. in this case, i just wanted easily colored text in a format i could understand without a whole lot of extra learning. to me, ansi escape sequences make sense. you print a color code, then you print a thing, then you print another color code, then you print another thing, and so on. where i really showed out was adding in hex values. for whatever reason, when i think about colors, i think in hex, like in html. originally colors was just a 16 pack, but now it can do the entire range of hex colors. the album art for this one makes my eyes happy. about this time when i was spending more time on the art side of things i was starting to pick up a theme with the chunky letters and bright colors.</p>
+
+<h2><a href="https://github.com/donuts-are-good/leggo">leggo</a></h2>
+
+<p>i do a lot of programming in go, and given that this year is dedicated to doing one project per week, a lot of my work has been in go, with git on top, with a readme, mit license, all that boilerplate stuff. this project lets me just give it a name and stamp out code for a new go project. the name is short for <code>let's go</code>.</p>
+
+<p>this one doesn&rsquo;t deserve a screenshot, it&rsquo;s a tool for my personal toolchain and has such a narrow scope it&rsquo;s not likely useful for but a few people who also make go apps with git and stuff added.</p>
+
+<h2><a href="https://github.com/donuts-are-good/login-auth-boilerplate">login-auth-boilerplate</a></h2>
+
+<p>often ill be making a webapp or something, and login is the one boilerplate item that gives me the most trouble. not because it&rsquo;s hard but because you can do it in various degrees of done-ness and still call it -done-. you can throw just an email and a password in a database and call it a day, or you could do tokens and say that&rsquo;s fine, or maybe biscuits, macaroons, whatever technology you like. i have a view of what i think is &lsquo;good enough&rsquo; as a starting point that uses emails and bcrypt hashed passwords along with tokens and this login auth boilerplate package allows me to stamp out a golang web app starting with working auth. i recently did another project with this, which is a simple forum. i spose we can talk about that next.</p>
+
+<h2>forumbtw</h2>
+
+<p><img src="https://user-images.githubusercontent.com/96031819/236967721-38cf822d-5f2d-44a9-b06a-a51e526cbe28.png" alt="forumbtw" /></p>
+
+<p>this one has no graphics, no readme, no nothing, because it&rsquo;s what im working on right now. i used the login auth boilerplate for it and introduced some odd behavior i guess, because it works locally but not remotely. i think it&rsquo;s because i slowly kinda rewrote my own token system and didn&rsquo;t use parts of the boilerplate. i should pass those changes up. anyway, this is a forum thing that is simple like phpbb, but written in go (<em>go</em> figure), and it uses a threaded structure like reddit or hackernews where each comment can be responded to. i&rsquo;d like to add themes and tags/categories next along with fleshing out the role based access system. the idea i have in mind and how ive built it out so far is to have role based access like discord.</p>
+
+<h2>let&rsquo;s do a few quick ones</h2>
+
+<p>not just because this is taking forever, but because these are less significant or are something to be less excited about due to not being interesting. it&rsquo;s a lot to type out all this markdown and link them, so check out my github profile to grab a copy of them if you want to see what makes them less significant in my opinion: <a href="https://github.com/donuts-are-good/">https://github.com/donuts-are-good/</a></p>
+
+<h3>git gone</h3>
+
+<p>this removes a file for the history of your git repo. if you commit a build artifact or something, this will remove that.</p>
+
+<h3>drop zone</h3>
+
+<p>you drop an image file onto it and it turns it into a copy-pastable string that you can inject into html to make images where they normally aren&rsquo;t meant to be.</p>
+
+<h3>whitescale</h3>
+
+<p>vscode theme to burn out your eyes. does what it says on the box. bright white everything.</p>
+
+<h3>onehit</h3>
+
+<p>hit counter as a service</p>
+
+<h3>boombox</h3>
+
+<p>streaming audio server that is a little simpler than icecast. also not as good as icecast.</p>
+
+<h3>minatar</h3>
+
+<p>these things are so dang cool. it takes any string and turns it into a litle gravatar looking thing. i love this tool. wish i had more reason to use it.</p>
+
+<h3>notes</h3>
+
+<p>this is a journaling tool that is tag based. i still use it.</p>
+
+<h3>signupless</h3>
+
+<p>why do signups at all, just let the user in and stamp a serial number on them and let them choose when to complete a full signup. love this tool, actively looking for things to use it.</p>
+
+<h3>libsignupless</h3>
+
+<p>same as above</p>
+
+<h3>curlpass</h3>
+
+<p>i think the https for this one just expired. i was the only user, me and a few bots, so i didn&rsquo;t mind. probably won&rsquo;t renew the domain. cool tool, but more novelty than anything. it lets you pipe a new password into the terminal like icanhazip.com can do for an ip</p>
+
+<h3>ed25519-randomart</h3>
+
+<p>nobody knows or cares what randomart is, i say hyperbolically. this is my interpretation of a modern animated randomart for ed25519 keys loosely based on lava lamp.</p>
+
+<h3>rsa-helper</h3>
+
+<p>dont use this. im sorry for creating it. i know better and i did it anyway.</p>
+
+<h3>curvy</h3>
+
+<p>this takes and ed25519 key and converts this to an x25519 key. dont use this, it&rsquo;s probably not safe. i did it because an article by filippo valsorda got me all hyped up. i have no math skills, it was just an experiment.</p>
+
+<h3>audit-a11y</h3>
+
+<p>i thought this would be more popular than it was. it scans any web page and spits out a list of all the accessibility breakages that would make it hard for an impaired user to use the site.</p>
+
+<h3>gofetch</h3>
+
+<p>bc neofetch takes too long to run on my system</p>
+
+<h3>knockknock</h3>
+
+<p>this isn&rsquo;t a tool to do a denial of service on a static website, but it could be seen that way i suppose. i deliberately left this tool somewhat unoptimized, as hard as it was because it was just a menace on the network in the state it was in before uploading. i just wanted to load test bearclaw to see what i needed to focus on when it came to optimizing the code. i claim no responsibility for how this is used.</p>
+
+<h3>CSVDB</h3>
+
+<p>i can&rsquo;t remember what i was doing but i had one of those what-if moments, it went something like this: &ldquo;what if&hellip; we had a &lsquo;database&rsquo; that was just a csv document for each table?&rdquo; my logic behind that was that everything is there in plaintext, and then if things went wrong the user could just use a text editor to figure stuff out. this project was always an oddity to me. i haven&rsquo;t had the guts to use it on anything, but i just had to stick my hand on the stove to figure out what would happen. it is what says, a csvdb, but not sure why anybody would want to use it.</p>
+
+<h2>neosay</h2>
+
+<p>very handy for terminal folk. here&rsquo;s the pitch: you define some credentials, either in a file or in your environment variables, and neosay pipes the output of whatever terminal thing you have into the matrix chat of your choice, as a bot. so imagine you are in vim or whatever and you want to bounce the contents of the file real fast to your friends in matrix, you can just cat the file to neosay and specify the config for that room and you can have a bot that is unique in every room you put it in to send your output to the chat. i use this for server notifications in my personal firehose chat for various dev things, server events, other stuff. it&rsquo;s great.</p>
+
+<h2>araknnid</h2>
+
+<p>love this project. it&rsquo;s so fun to tweak and run. it&rsquo;s like a little pinebox derby car in that you just tweak random stuff and see what happens. i was on vacation so a lot of this project happened with very little connectivity, while floating around in choppy water. i was frustrated that the search engines i was using for something were all just so bad, none would just match the string and return the results. i ended up building araknnid and a little search frontend for it to query the results. it&rsquo;s very basic, but it lets me specify a site and it starts indexing that site and forming a map of all the links and crawling to other sites from there. the original plan was to use that scraped content to feed a small self-trained model but i&rsquo;m still learning the foundations of that.</p>
+
+<h3>wew, that was a lot</h3>
+
+<p>and there are a lot more. i did a count of the folders in my projects that i poke at from time to time, all the things i thought were cool enough to explore but didn&rsquo;t make into a fully functioning thing and i have about 100+ more than what you see here. a few i&rsquo;ve been looking at recently are somewhat pointless, like rendering my own 3d environments and shaders in opengl from inside go, or little isometric experiments in godot and aseprite. that stuff isn&rsquo;t worth your time and a lot of these experiments don&rsquo;t make it to github for that reason.</p>
+
+<p>so far i&rsquo;m ahead of schedule by a few months, so im taking my time to work on longer term projects right now because when you have this pressure to push weekly you can (as you see here) push a lot of garbage that is technically complete and counts but it isn&rsquo;t useful or impressive, and wouldn&rsquo;t be worth the space in a portfolio.</p>
+
+<h3>bearclaw</h3>
+
+<p>i didn&rsquo;t discuss bearclaw, i talk about it too much. it is by far the most useful and popular thing i&rsquo;ve made during all of this and it wasn&rsquo;t even intended to be anything but a tool to write about these projets.</p>
+
+<p>that&rsquo;s about all i&rsquo;ve got for now, thanks for reading :)</p>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+  <footer class="footer">
+    <div class="row">
+      <div class="col">
+				Thanks for reading :)
+      </div> 
+      <div class="col"><b>bearclaw</b> is a tiny static site generator <br><small class="text-muted">write your content in markdown and bearclaw converts it to html</small></div>
+      <div class="col">
+        <a href="https://github.com/donuts-are-good/bearclaw">source code</a>, <a href="https://github.com/donuts-are-good/bearclaw/blob/master/license">license</a> <br>
+        <a href="https://github.com/donuts-are-good/bearclaw/blob/master/README.md">readme</a>, <a href="https://github.com/donuts-are-good/bearclaw/issues/new">bugs</a> <br>
+      </div>
+
+      <!-- echo $secret | tr 'A-Za-z' 'N-ZA-Mn-za-m' | rev | base64 -d -->
+
+      <div class="col text-muted"><span style="color:deeppink">&hearts;</span> <b><a style="text-decoration:none;color:black" href="https://github.com/donuts-are-good/bearclaw/" target="_blank">@donuts-are-good</a></b><br><a href="https://github.com/donuts-are-good/bearclaw/blob/master/license" target="_blank" style="text-decoration:none;color:black">MIT License</a><br>2023</div>
+    </div>
+  </footer>
+  <br><br><br><br>
+</div>
+</div>
+<br><br><br><br>
+</body>
+</html>
